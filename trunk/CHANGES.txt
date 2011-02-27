@@ -1,0 +1,15 @@
+
+ObjectDynamicController Changes
+-------------------------------
+
+2010-05-13 Mr. 하늘
+1.1.0 배포.
+
+개선점
+  null이 입력될 때 오류가 나던 현상을 수정
+  광역화 형 변환 처리 기능 추가 (double > float > long > int > char)
+
+
+2010-05-13 Mr. 하늘
+모듈 생성.
+
