@@ -4,14 +4,14 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
 /**
- * ?�적?�로 객체�??�성?�는 ?�래??
+ * 동적으로 객체를 생성하는 클래스
  * 
- * @author Lotus
+ * @author Mr. 하늘
  * 
  */
 public class ObjectDynamicController {
 	/**
-	 * ??객체 ?�성
+	 * 새 객체 색성
 	 */
 	public Object newInstance(Class<?> clazz, Object... params) throws Exception {
 		Constructor<?>[] cts = clazz.getConstructors();
@@ -49,7 +49,7 @@ public class ObjectDynamicController {
 	}
 
 	/**
-	 * ?�수 ?�행
+	 * 함수 실행
 	 */
 	public Object runMethod(
 			Class<?> clazz,
@@ -104,7 +104,7 @@ public class ObjectDynamicController {
 	}
 
 	/**
-	 * ?�라미터????�� 비교
+	 * 파라미터의 타입 비교
 	 */
 	private boolean compareParamsType(Class<?>[] paramTypes, Object... params) {
 		if (paramTypes.length == params.length) {
@@ -303,14 +303,14 @@ public class ObjectDynamicController {
 	}
 
 	/**
-	 * �?��?�서 �?�?��?�기
+	 * 변수에서 값 가져오기
 	 */
 	public Object getField(Class<?> clazz, Object obj, String fieldName) throws Exception {
 		return clazz.getField(fieldName).get(obj);
 	}
 
 	/**
-	 * �?��??�??�기
+	 * 변수에 값 넣기
 	 */
 	public void setField(
 			Class<?> clazz,
